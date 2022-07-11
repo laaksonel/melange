@@ -208,6 +208,12 @@ let format_file ~(kind: Ext_file_extensions.syntax_kind) input =
   | Rei ->
     let ast, comments = Ast_reason_pp.RE.parse_interface_with_comments input in
     intf_format_fn ~comments:(`Re comments) ast
+  | Impl_ast ->
+    let ast = Binary_ast.read_ast_exn ~fname:input Ml setup_error_printer in
+    impl_format_fn ~comments:(`Re []) ast
+  | Intf_ast ->
+    let ast = Binary_ast.read_ast_exn ~fname:input Mli setup_error_printer in
+    intf_format_fn ~comments:(`Re []) ast
   | _ -> (raise (Arg.Bad ("don't know what to do with " ^ input)))
   end
 
