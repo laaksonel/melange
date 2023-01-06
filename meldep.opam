@@ -9,7 +9,7 @@ homepage: "https://github.com/melange-re/melange"
 bug-reports: "https://github.com/melange-re/melange/issues"
 depends: [
   "dune" {>= "3.5"}
-  "ocaml"
+  "ocaml" {>= "5.0" & < "5.1"}
   "cppo" {build}
   "base64" {>= "3.1.0"}
   "cmdliner" {>= "1.1.0"}

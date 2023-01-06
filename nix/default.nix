@@ -86,8 +86,8 @@ rec {
     propagatedBuildInputs = with ocamlPackages; [
       cmdliner
       luv
-      ocaml-migrate-parsetree-2
       meldep
+      ocaml-migrate-parsetree-2
     ];
 
     meta.mainProgram = "mel";

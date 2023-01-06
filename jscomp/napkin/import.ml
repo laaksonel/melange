@@ -1920,6 +1920,7 @@ include struct
       |> Migrate_411_412.copy_structure
       |> Migrate_412_413.copy_structure
       |> Migrate_413_414.copy_structure
+      |> Migrate_414_500.copy_structure
 
     let copy_signature str =
       str
@@ -1931,12 +1932,13 @@ include struct
       |> Migrate_411_412.copy_signature
       |> Migrate_412_413.copy_signature
       |> Migrate_413_414.copy_signature
-
+      |> Migrate_414_500.copy_signature
   end
 
   module From_current = struct
     let copy_structure str =
       str
+      |> Migrate_500_414.copy_structure
       |> Migrate_414_413.copy_structure
       |> Migrate_413_412.copy_structure
       |> Migrate_412_411.copy_structure
@@ -1948,6 +1950,7 @@ include struct
 
     let copy_signature str =
       str
+      |> Migrate_500_414.copy_signature
       |> Migrate_414_413.copy_signature
       |> Migrate_413_412.copy_signature
       |> Migrate_412_411.copy_signature

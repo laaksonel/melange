@@ -32,8 +32,8 @@
  (depends
   (ocaml
    (and
-    (>= "4.14.0")
-    (< "4.15.0")))
+    (>= "5.0")
+    (< "5.1")))
   (melange-compiler-libs
    (>= "0.0.1-414"))
   (cmdliner
@@ -48,7 +48,10 @@
  (synopsis
   "Melange counterpart to `ocamldep` that understands Melange-specific constructs")
  (depends
-  ocaml
+  (ocaml
+   (and
+    (>= "5.0")
+    (< "5.1")))
   (cppo :build)
   (base64
    (>= "3.1.0"))
@@ -62,7 +65,10 @@
  (synopsis
   "Build system for Melange that defers to Dune for build orchestration")
  (depends
-  ocaml
+  (ocaml
+   (and
+    (>= "5.0")
+    (< "5.1")))
   (melange
    (= :version))
   (cmdliner
@@ -70,5 +76,5 @@
   (luv
    (>= "0.5.11"))
   (ocaml-migrate-parsetree
-   (>= "2.3.0"))
+   (>= "2.4.0"))
   (ounit :with-test)))

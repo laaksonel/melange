@@ -16,11 +16,19 @@ let
   pkgs = import src {
     extraOverlays = [
       (self: super: {
-        ocamlPackages = super.ocaml-ng.ocamlPackages_4_14.overrideScope' (oself: osuper: {
+        ocamlPackages = super.ocaml-ng.ocamlPackages_5_0.overrideScope' (oself: osuper: {
           dune_3 = osuper.dune_3.overrideAttrs (_: {
             src = builtins.fetchurl {
               url = https://github.com/ocaml/dune/archive/b8250aa70.tar.gz;
               sha256 = "0rk49ywbjjzrqk47z8sc36b68ig0vvbp1b8f2hr1bp769sj9s79n";
+            };
+          });
+          ocaml-migrate-parsetree-2 = osuper.ocaml-migrate-parsetree-2.overrideAttrs (old: {
+            src = super.fetchFromGitHub {
+              owner = "laaksonel";
+              repo = "ocaml-migrate-parsetree";
+              rev = "8f0a340f4876788ee41a9342de4feff523d39412";
+              sha256 = "sha256-Td8kSQIzNLrd0eLCmPnI6Qy4fApkWpXKRvahXUSYnko=";
             };
           });
         });
