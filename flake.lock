@@ -259,11 +259,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1673097679,
-        "narHash": "sha256-KKcoan+xyotbMQ2zaNNcoDK7rtmvhwUJ3WdKnVziQjY=",
+        "lastModified": 1673385419,
+        "narHash": "sha256-plptY3JkxfYAqdxinFFlinbVLmQuI4/+tJzKKF04iAQ=",
         "owner": "laaksonel",
         "repo": "melange-compiler-libs",
-        "rev": "8874de37488453228c1eea62ab90b9d8925f0546",
+        "rev": "c2f85ef5decb438303b1e288a3f0f7cbee97da34",
         "type": "github"
       },
       "original": {
