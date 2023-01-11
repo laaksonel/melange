@@ -24,8 +24,8 @@
               src = super.fetchFromGitHub {
                 owner = "laaksonel";
                 repo = "ocaml-migrate-parsetree";
-                rev = "8f0a340f4876788ee41a9342de4feff523d39412";
-                sha256 = "sha256-Td8kSQIzNLrd0eLCmPnI6Qy4fApkWpXKRvahXUSYnko=";
+                rev = "ebf453b90b3edc8aca5999c33d71f330b2f0bf37";
+                sha256 = "sha256-IGFVZOyV4E9Q0dOQC3RWeAg/TUkMjRO6pVcGj0ftu3M=";
               };
             });
           });
